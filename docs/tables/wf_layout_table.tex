@@ -1,0 +1,41 @@
+\documentclass[border=8pt]{standalone}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+
+\sisetup{
+  detect-all,
+  per-mode=symbol,
+  group-minimum-digits=4
+}
+
+\definecolor{headergray}{HTML}{EFEFEF}
+\newcommand{\tableheader}[1]{\multicolumn{1}{c}{\cellcolor{headergray}\textbf{#1}}}
+
+\begin{document}
+\pagecolor{white}
+\begin{tabular}{@{}c@{}}
+% {\large\textbf{Table 2: Layout parameters of the simulated wind farm.}}\\[0.6em]
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{l S[table-format=4.0] S[table-format=4.0] l}
+\toprule
+\cellcolor{headergray}\textbf{Parameter} &
+\cellcolor{headergray}{\textbf{$x$}} &
+\cellcolor{headergray}{\textbf{$y$}} &
+\cellcolor{headergray}\textbf{Unit} \\
+\midrule
+WTG 1 position & 382  & 1527 & \si{\metre} \\
+WTG 2 position & 954  & 1527 & \si{\metre} \\
+WTG 3 position & 1527 & 1527 & \si{\metre} \\
+WTG 4 position & 382  & 954  & \si{\metre} \\
+WTG 5 position & 954  & 954  & \si{\metre} \\
+WTG 6 position & 1527 & 954  & \si{\metre} \\
+WTG 7 position & 382  & 382  & \si{\metre} \\
+WTG 8 position & 954  & 382  & \si{\metre} \\
+WTG 9 position & 1527 & 382  & \si{\metre} \\
+\bottomrule
+\end{tabular}
+\end{tabular}
+\end{document}
