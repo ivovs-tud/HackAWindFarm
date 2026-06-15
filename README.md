@@ -1,8 +1,8 @@
 # Hack a Wind Farm Python Attack Interface
 
-This repository provides a Python interface for interacting with the Hack a Wind Farm supervisory controller. It lets participants observe selected communication channels and, when enabled, perform false data injection (FDI) attacks against selected turbine signals.
+This repository provides a Python interface for interacting with the Hack a Wind Farm supervisory controller. It lets participants observe selected communication channels and, when enabled, perform false data injection (FDI) attacks against selected turbine signals. 
 
-The interface is specific to the Hack a Wind Farm hackathon setup and is not intended as a general-purpose IEC 61850, SCADA, or wind farm control library.
+The interface is specific to the Hack a Wind Farm hackathon setup and is not intended as a general-purpose IEC 61850, SCADA, or wind farm control library. See the ``docs`` folder for an introduction to wind farms and an in-depth description of the hardware setups.
 
 ## Requirements
 
