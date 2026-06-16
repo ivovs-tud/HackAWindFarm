@@ -183,11 +183,3 @@ You will be provided with access to two benchmark systems, each comprising all t
 * Negatively affect the wind farm operation without triggering any alarm from the SCADA.
 * Participants can use the provided attack interface to carry out a MitM attack, or they can implement it directly.
 * Provided that the regulation above is followed, participants can also reach their goal by compromising either the IPC or the SCADA PC(s), but not the Speedgoat real-time simulator nor the *Scenario application* on the PC.
-
-
-
-Please also check the following GitHub repositories for further information and the source code of the ICS system that we developed specifically for the hackathon.
-
-- [Private Attack Interface](https://github.com/ivovs-tud/_privateAttackInterface.git)
-
-- [IEC61850SupervisoryController](https://github.com/ivovs-tud/IEC61850SupervisoryController.git)
