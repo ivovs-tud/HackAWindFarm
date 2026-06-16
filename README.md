@@ -100,15 +100,18 @@ This example reads the latest yaw value for turbine 1 and, after 10 seconds, rep
 
 ## Available Signals
 
+_Measurements_: 
 - **Wind Speed**: wind speed measured at the turbine.
 - **Wind Direction**: wind direction relative to true north.
 - **Rotor Speed**: rotor rotational speed.
 - **Yaw**: current nacelle yaw angle relative to true north.
 - **Blade Pitch**: blade pitch angle.
 - **Power**: electrical power output.
+- **Generator Torque**: generator torque measurement.
+
+_Setpoints_:
 - **Yaw Setpoint**: target yaw angle commanded by the controller, relative to true north.
 - **Power Setpoint**: target power output commanded by the controller.
-- **Generator Torque**: generator torque measurement or command.
 
 Use these exact strings as keys in `tap_communication()`, `fdi_communication()`, `data_received`, and `attacks`.
 
