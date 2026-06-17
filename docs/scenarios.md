@@ -6,7 +6,7 @@ Even when the wind farm is operating in what we call a steady state, these quant
 
 These scenarios matter because they change how the farm can operate. A shift in wind direction can move wakes onto different downstream turbines, while a change in requested power can force the farm to downregulate instead of producing all available wind power. During normal operation, scenarios occur randomly. To test an attack under a specific condition, a selected scenario can be replayed.
 
-The scenarios below each last $900\mathrm{s}$, or $15\mathrm{min}$. Each plot shows the wind speed and wind direction from the corresponding YAML file. The dashed red line in the wind-speed panel marks the rated wind speed, $11.4\mathrm{m/s}$. The light red bands in the wind-direction panel indicate **overlap** directions, where the turbine rows are more closely aligned with the incoming wind and wake overlap is therefore expected to be stronger: $225^\circ$-$240^\circ$, $265^\circ$-$275^\circ$, and $300^\circ$-$315^\circ$. The **no-overlap** directions used in these scenarios are $240^\circ$-$265^\circ$ and $275^\circ$-$300^\circ$, where the wakes are expected to pass less directly through downstream turbines.
+The scenarios below each last $900\mathrm{s}$, or $15\mathrm{min}$. Each plot shows the wind speed and wind direction from the corresponding YAML file. The dashed red line in the wind-speed panel marks the rated wind speed, $11.4\mathrm{m/s}$. The light red bands in the wind-direction panel indicate **overlap** directions, where the turbine rows are more closely aligned with the incoming wind and wake overlap is therefore expected to be stronger: $225^\circ$ - $240^\circ$, $265^\circ$ - $275^\circ$, and $300^\circ$ - $315^\circ$. The **no-overlap** directions used in these scenarios are $240^\circ$ - $265^\circ$ and $275^\circ$ - $300^\circ$, where the wakes are expected to pass less directly through downstream turbines.
 
 TI is constant in all of these files; a larger TI indicates a more turbulent incoming flow. The requested farm power is also constant in each scenario and is therefore reported in the text rather than plotted.
 
@@ -14,7 +14,7 @@ TI is constant in all of these files; a larger TI indicates a more turbulent inc
 
 ![Scenario 01 wind speed and wind direction](./images/scenarios/scenario_01.svg)
 
-The wind speed stays below rated, varying gently between $4.4$ and $5.3\mathrm{m/s}$. The direction remains in an overlap-prone sector, oscillating around $260.1^\circ$-$270.6^\circ$ without a major directional transition, so wake interactions are expected to remain consistently relevant. The requested power is constant at $44.34\mathrm{MW}$. TI is low and constant at 0.09, so the flow is comparatively smooth throughout the scenario.
+The wind speed stays below rated, varying gently between $4.4$ and $5.3\mathrm{m/s}$. The direction remains in an overlap-prone sector, oscillating around $260.1^\circ$ - $270.6^\circ$ without a major directional transition, so wake interactions are expected to remain consistently relevant. The requested power is constant at $44.34\mathrm{MW}$. TI is low and constant at 0.09, so the flow is comparatively smooth throughout the scenario.
 
 ## Scenario 02: overlap direction change, below-rated wind, high TI
 
@@ -26,7 +26,7 @@ The wind speed remains below rated and nearly steady, staying between $5.2$ and 
 
 ![Scenario 03 wind speed and wind direction](./images/scenarios/scenario_03.svg)
 
-The wind speed is around rated conditions and gradually rises from $12.5$ to $12.9\mathrm{m/s}$, with a full range of $11.3$-$12.9\mathrm{m/s}$. The wind direction stays almost fixed in an overlap-prone sector, around $263.4^\circ$-$268.3^\circ$, so wake geometry is mostly stable. The requested power is constant at $14.31\mathrm{MW}$. TI is low and constant at 0.09, so the main ambient change is the wind speed rather than turbulence.
+The wind speed is around rated conditions and gradually rises from $12.5$ to $12.9\mathrm{m/s}$, with a full range of $11.3$ - $12.9\mathrm{m/s}$. The wind direction stays almost fixed in an overlap-prone sector, around $263.4^\circ$ - $268.3^\circ$, so wake geometry is mostly stable. The requested power is constant at $14.31\mathrm{MW}$. TI is low and constant at 0.09, so the main ambient change is the wind speed rather than turbulence.
 
 ## Scenario 04: overlap direction change, above-rated wind speed change, high TI
 
@@ -38,7 +38,7 @@ The wind speed is above rated and increases from $13.3$ to $14.3\mathrm{m/s}$. T
 
 ![Scenario 05 wind speed and wind direction](./images/scenarios/scenario_05.svg)
 
-The wind speed is below rated and changes modestly within $7.8$-$9.3\mathrm{m/s}$, returning close to its starting value by the end. The wind direction stays in a no-overlap sector, drifting gently from about $259^\circ$ to $253^\circ$, so direct wake alignment is reduced compared with overlap cases. The requested power is constant at $9.19\mathrm{MW}$. TI is low and constant at 0.09, meaning turbulence is not the dominant feature.
+The wind speed is below rated and changes modestly within $7.8$ - $9.3\mathrm{m/s}$, returning close to its starting value by the end. The wind direction stays in a no-overlap sector, drifting gently from about $259^\circ$ to $253^\circ$, so direct wake alignment is reduced compared with overlap cases. The requested power is constant at $9.19\mathrm{MW}$. TI is low and constant at 0.09, meaning turbulence is not the dominant feature.
 
 ## Scenario 06: no-overlap direction change, at-rated wind, high TI
 
@@ -50,7 +50,7 @@ The wind speed is near rated and nearly steady, staying between $11.5$ and $11.9
 
 ![Scenario 07 wind speed and wind direction](./images/scenarios/scenario_07.svg)
 
-The wind speed is above rated and very steady, staying between $14.7$ and $15.0\mathrm{m/s}$. The direction remains in a no-overlap sector, around $281.0^\circ$-$289.2^\circ$, with only small oscillations. The requested power is constant at $13.13\mathrm{MW}$. TI is low and constant at 0.07, the lowest value in this set, so this is a smooth, high-wind scenario with relatively stable wake geometry.
+The wind speed is above rated and very steady, staying between $14.7$ and $15.0\mathrm{m/s}$. The direction remains in a no-overlap sector, around $281.0^\circ$ - $289.2^\circ$, with only small oscillations. The requested power is constant at $13.13\mathrm{MW}$. TI is low and constant at 0.07, the lowest value in this set, so this is a smooth, high-wind scenario with relatively stable wake geometry.
 
 ## Scenario 08: no-overlap direction and wind speed change, high TI
 
