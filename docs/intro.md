@@ -14,7 +14,7 @@ Welcome to the first edition of the **Hack a Wind Farm Hackathon**. The purpose 
 ![Fig. 1: Hackathon architecture overview](./images/architecture_overview.png)
 *Fig. 1: An overview of the hackathon architecture.*
 
-This document describes the wind farm used in the hackathon from both a physical and a cyber point of view. It first gives a brief description of how wind farms and wind turbines operate, followed by a detailed description of the hardware and software that implement the wind farm Industrial Control System (ICS), which comprises the wind turbine local controllers and the SCADA. Finally, rules and goals for participants are provided.
+This document describes the wind farm used in the hackathon from both a physical and a cyber point of view. It first gives a brief description of how wind farms and wind turbines operate, followed by a detailed description of the hardware and software that implement the wind farm Industrial Control System (ICS), which comprises the wind turbine local controllers and the SCADA. Finally, rules and goals for participants are provided. Additional details on the ambient operating conditions and monitoring logic are provided in the [scenario overview](./scenarios.md) and the [detector overview](./detectors.md).
 
 ## Physical domain: operation of wind farms and wind turbines
 
@@ -123,7 +123,7 @@ The parameters of the simulated WTG and WF are provided in the following tables.
 To help interpret how the turbines interact with each other, the wind farm layout is also shown graphically in Fig. 9. The figure indicates the relative positions of the turbines and highlights where wake interactions are expected to be stronger or weaker, depending on the incoming wind direction. In general, turbines that are aligned with the wind direction experience more wake overlap, while turbines that are laterally displaced from one another are less directly affected by upstream wakes.
 
 ![Fig. 9: Layout of the wind farm](./images/wf_grid.png)
-*Fig. 9: Layout of the simulated 3-by-3 wind farm. The turbine positions correspond to the coordinates listed in Table 2. Furthemore, the strength of wake effects is illutrated for a range of wind directions.*
+*Fig. 9: Layout of the simulated 3-by-3 wind farm. The turbine positions correspond to the coordinates listed in Table 2. Furthermore, the strength of wake effects is illustrated for a range of wind directions.*
 
 
 ## Cyber domain: description of the ICS hardware and software architecture
@@ -165,9 +165,9 @@ The ICS architecture described above has been implemented across three different
 
 #### PC(s)
 
-Other components of the SCADA, namely the wind farm control algorithm and the data historian, are implemented on one or more PC(s). The wind farm controller also includes a series of anomaly detection algorithms. These functions are part of the binary called the *SCADA application*.  The HMI is implemented separately in a binary called the *HMI application*.
+Other components of the SCADA, namely the wind farm control algorithm and the data historian, are implemented on one or more PC(s). The wind farm controller also includes a series of [anomaly detection algorithms](./detectors.md). These functions are part of the binary called the *SCADA application*.  The HMI is implemented separately in a binary called the *HMI application*.
 
-The PC also implements a separate task, called the *Scenario application*, for simulating the wind conditions and grid-side demand in real time. Furthermore, the PC implements a custom attack interface that can be used to carry out a MitM attack without requiring complex hacking skills. The attack interface is further described [here](https://github.com/ivovs-tud/_privateAttackInterface.git).
+The PC also implements a separate task, called the *Scenario application*, for simulating the [wind conditions and grid-side demand](./scenarios.md) in real time. Furthermore, the PC implements a custom attack interface that can be used to carry out a MitM attack without requiring complex hacking skills. The attack interface is further described [here](https://github.com/ivovs-tud/_privateAttackInterface.git).
 
 
 ## Resources and goals for the participants
