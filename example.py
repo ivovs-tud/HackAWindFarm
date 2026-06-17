@@ -1,18 +1,35 @@
 """Sample attack-side client for exercising the binary protocol."""
+
 import logging
 import math
-logging.basicConfig(level=logging.WARNING, format='[%(asctime)s] %(levelname)s: %(message)s')
 
 from AttackInterface import AttackInterface
 
+# The logging level can be changed to `logging.DEBUG` for more information or be saved to a file
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
+
+# Variables which are saved in between calls (you can define your own as well)
+avg_power_after_3_secs: float = float('nan')
+...
+
+
 def attack_function(data_received: dict[list[float]], attacks: dict[list[float]], time_ms: int):
+    # Load the persistent variables
+    global avg_power_after_3_secs
+    ...
 
     logging.debug(data_received)
-    # attacks = data_received
+
     for i in range(9):
         attacks['Yaw'][i] = 80 * math.sin(time_ms / 10000 + i)
         attacks['Power'][i] = 1e7
-        # attacks['Yaw'][i] = 40
+    
+    # Save some values to memory (to be used later)
+    if (time_ms / 1000) > 3 and math.isnan(avg_power_after_3_secs):
+        avg_power_after_3_secs = sum(data_received['Power']) / len(data_received['Power'])
+
+    print(f"t={time_ms / 1000:.1f}, avg power after 3 secs: {avg_power_after_3_secs:_.0f} (in W)")
+
 
 
 if __name__ == "__main__":
